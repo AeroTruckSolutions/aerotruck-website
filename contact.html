@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | AeroTruck Solutions</title>
+  <meta name="description" content="Contact AeroTruck Solutions for consultations, fleet demos and support. 24/7 assistance available."/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="IMG_6342.png" alt="logo" class="brand-logo"></a>
+      <nav class="main-nav">
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet Portal</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" aria-current="page" class="btn-cta">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p class="lead">Reach out for a free consultation, fleet demo or 24/7 assistance.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-info card">
+          <h3>Contact Details</h3>
+          <p><strong>Phone:</strong> <a href="tel:+18001234567">+1 (800) 123-4567</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a></p>
+          <p><strong>Office:</strong> 123 Logistics Ave, Anytown, USA</p>
+          <p>We provide 24/7 operational support and dedicated account management for all clients.</p>
+        </div>
+
+        <form class="contact-form card" action="https://formspree.io/f/your-form-id" method="POST">
+          <h3>Request a Consultation</h3>
+          <label>Full name
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone">
+          </label>
+          <label>Company / Fleet size
+            <input type="text" name="company">
+          </label>
+          <label>Message
+            <textarea name="message" rows="5"></textarea>
+          </label>
+          <button class="btn-primary" type="submit">Send Request</button>
+          <p class="muted small">Form uses Formspree for demo. Replace action URL with your form handler or Formspree ID.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><img src="IMG_6342.png" alt="logo" class="logo-small"><p class="muted">© <span id="year-contact"></span> AeroTruck Solutions Inc.</p></div>
+      <div class="muted">info@aerotrucksolutions.com • +1 (800) 123-4567</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year-contact').textContent = new Date().getFullYear();</script>
+</body>
+</html>
