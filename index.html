@@ -1,36 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AeroTruck Solutions Inc.</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroTruck Solutions — Home</title>
+  <meta name="description" content="AeroTruck Solutions — Reliable accounting, fleet management, recruiting and 24/7 assistance for the trucking industry."/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="https://i.imgur.com/4O0r5mD.png" alt="AeroTruck Logo" />
-      <h1>AeroTruck Solutions Inc.</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="AeroTruck Solutions home">
+        <img src="IMG_6342.png" alt="AeroTruck Solutions logo" class="brand-logo">
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet Portal</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn-cta">Contact</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="fleet.html">Fleet Portal</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="careers.html">Careers</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Smart. Reliable. AeroTruck.</h2>
-    <p>We provide Accounting, Fleet Management, Recruiting and 24/7 Assistance services across the USA.</p>
-    <a href="services.html" class="btn">Explore Services</a>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Reliable accounting, smarter fleet management,<br>trusted recruiting, and 24/7 assistance — built for trucking</h1>
+          <p class="hero-lead">We keep fleets moving: reduce operating costs, stay compliant, and hire dependable drivers — all under one roof.</p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="contact.html">Get a Free Consultation</a>
+            <a class="btn-outline" href="fleet.html">Request Fleet Demo</a>
+          </div>
+          <ul class="hero-metrics" aria-hidden="true">
+            <li><strong>250+</strong><span>Trucks Managed</span></li>
+            <li><strong>24/7</strong><span>Support</span></li>
+            <li><strong>98%</strong><span>On-time Payroll</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 AeroTruck Solutions Inc. | All rights reserved</p>
+    <!-- HOW WE HELP -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">How we help</h2>
+        <p class="section-intro">Integrated professional services designed specifically for trucking operations.</p>
+
+        <div class="grid-4">
+          <article class="card">
+            <h3>Accounting</h3>
+            <p>Professional bookkeeping, IFTA (fuel tax) reporting, payroll and carrier-tailored financial dashboards.</p>
+          </article>
+
+          <article class="card">
+            <h3>Fleet Management</h3>
+            <p>Telematics integration, maintenance tracking, route optimization and full compliance support.</p>
+          </article>
+
+          <article class="card">
+            <h3>Recruiting</h3>
+            <p>CDL driver sourcing, MVR/CDL screening, background checks and efficient onboarding workflows.</p>
+          </article>
+
+          <article class="card">
+            <h3>24/7 Assistance</h3>
+            <p>Around-the-clock dispatch, roadside coordination and incident management wherever your drivers operate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section dark">
+      <div class="container">
+        <h2 class="section-title">Why AeroTruck Solutions?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h4>Cost Optimization</h4>
+            <p>Identify savings, safeguard margins and avoid costly compliance penalties through proactive controls.</p>
+          </div>
+          <div class="why-item">
+            <h4>Compliance &amp; Safety</h4>
+            <p>IFTA and ELD support, DOT/FMCSA-aligned processes and audit-ready documentation.</p>
+          </div>
+          <div class="why-item">
+            <h4>Dedicated Account Manager</h4>
+            <p>A single point of contact who coordinates reporting, operations and continuous improvement.</p>
+          </div>
+        </div>
+
+        <div class="partners">
+          <p class="muted">Trusted by industry leaders</p>
+          <div class="partner-logos" aria-hidden="true">
+            <div class="logo-plate">Client A</div>
+            <div class="logo-plate">Client B</div>
+            <div class="logo-plate">Client C</div>
+            <div class="logo-plate">Client D</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="IMG_6342.png" alt="AeroTruck logo small" class="logo-small">
+        <p class="muted">© <span id="year"></span> AeroTruck Solutions Inc. — Built for trucking</p>
+      </div>
+      <div class="footer-right">
+        <p class="muted">Email: <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a> • Phone: <a href="tel:+18001234567">+1 (800) 123-4567</a></p>
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
