@@ -1,41 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - AeroTruck Solutions</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services | AeroTruck Solutions</title>
+  <meta name="description" content="Comprehensive business support services for trucking — accounting, recruitment, fleet management and 24/7 assistance."/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="https://i.imgur.com/4ORw5mD.png" alt="Logo">
-      <h1>AeroTruck Solutions Inc.</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="IMG_6342.png" alt="AeroTruck logo" class="brand-logo"></a>
+      <nav class="main-nav">
+        <a href="services.html" aria-current="page">Services</a>
+        <a href="fleet.html">Fleet Portal</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn-cta">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open menu">☰</button>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="services.html">Services</a></li>
-        <li><a href="fleet.html">Fleet Portal</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="careers.html">Careers</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <section class="content">
-    <h2>Our Services</h2>
-    <p>We provide full-cycle support for trucking businesses:</p>
-    <ul>
-      <li>📘 Accounting & Tax Filing</li>
-      <li>🚚 Fleet Management Solutions</li>
-      <li>🧑‍💼 Driver Recruiting</li>
-      <li>📞 24/7 Dispatch & Assistance</li>
-    </ul>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Comprehensive Business Support Services for the Trucking Sector</h1>
+        <p class="lead">At AeroTruck Solutions, we deliver a fully integrated suite of professional services tailored exclusively to the needs of trucking companies — from owner-operators to large, multi-state carriers.</p>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 AeroTruck Solutions Inc. | All Rights Reserved.</p>
+    <section class="section">
+      <div class="container">
+        <h2>Our Core Service Areas</h2>
+
+        <article class="service-block">
+          <h3>Accounting &amp; Financial Services</h3>
+          <p>Full accounting services designed for carriers, including:</p>
+          <ul>
+            <li>IFTA and fuel tax reporting</li>
+            <li>Driver payroll processing</li>
+            <li>Accounts receivable and billing</li>
+            <li>Financial statement preparation and management reporting</li>
+            <li>General ledger management and audit support</li>
+          </ul>
+        </article>
+
+        <article class="service-block">
+          <h3>Driver Recruitment &amp; Onboarding</h3>
+          <p>Recruit and onboard qualified CDL drivers with a complete compliance-first approach:</p>
+          <ul>
+            <li>Driver sourcing, screening and qualification</li>
+            <li>FMCSA and DOT compliance checks</li>
+            <li>Background, employment verification and MVR checks</li>
+            <li>Drug &amp; alcohol testing coordination</li>
+            <li>End-to-end onboarding and document management</li>
+          </ul>
+        </article>
+
+        <article class="service-block">
+          <h3>Fleet Management Support</h3>
+          <p>Operational services to maximize uptime and lifecycle value:</p>
+          <ul>
+            <li>Maintenance scheduling and parts tracking</li>
+            <li>Fleet compliance and document management</li>
+            <li>Vehicle lifecycle oversight and replacement planning</li>
+            <li>Licensing, permitting and inspection coordination</li>
+            <li>Operational reporting and efficiency analysis</li>
+          </ul>
+        </article>
+
+        <article class="service-block">
+          <h3>24/7 Dispatch &amp; Operational Assistance</h3>
+          <p>Real-time operational support to minimize delays and downtime:</p>
+          <ul>
+            <li>Round-the-clock driver communication and dispatch</li>
+            <li>Emergency response and incident coordination</li>
+            <li>Load coordination and required documentation</li>
+            <li>Real-time resolution and escalation processes</li>
+            <li>Night and weekend coverage for uninterrupted operations</li>
+          </ul>
+        </article>
+
+        <p class="muted">Our service delivery is underpinned by documented processes, strict internal quality controls, and a team with deep sector-specific expertise. We act as an extension of your operations — providing the structure and support needed for sustainable growth.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><img src="IMG_6342.png" alt="logo" class="logo-small"><p class="muted">© <span id="year-svc"></span> AeroTruck Solutions Inc.</p></div>
+      <div class="muted">info@aerotrucksolutions.com • +1 (800) 123-4567</div>
+    </div>
   </footer>
+  <script src="script.js"></script>
+  <script>document.getElementById('year-svc').textContent = new Date().getFullYear();</script>
 </body>
 </html>
