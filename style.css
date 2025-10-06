@@ -127,3 +127,49 @@ body{
   .why-grid{grid-template-columns:1fr}
   .header-inner{padding:12px 0}
 }
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: linear-gradient(to right, #0b0b0d, #1a1a1f);
+}
+
+.hero-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  color: #ffffff;
+  max-width: 45%;
+}
+
+.hero-image img {
+  width: 550px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));
+}
+
+/* ✅ Animacija sunkvežimiui */
+.truck-animated {
+  opacity: 0;
+  transform: translateX(120px);
+  animation: truckEnter 2.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes truckEnter {
+  0% {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
