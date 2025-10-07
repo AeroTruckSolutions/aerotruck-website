@@ -2,123 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AeroTruck Solutions — Reliable fleet services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AeroTruck Solutions — Premium Fleet Services</title>
+  <meta name="description" content="Reliable accounting, smarter fleet management, trusted recruiting, and 24/7 assistance built for trucking.">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="AeroTruck Solutions home">
-        <img src="images/logo.png" alt="AeroTruck Solutions logo" class="brand-logo">
-      </a>
-      <nav class="main-nav" id="mainNav">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="fleet.html">Fleet Portal</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html" class="btn contact-btn">Contact</a></li>
-        </ul>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <img src="images/logo.png" alt="AeroTruck Solutions logo" class="logo">
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet Portal</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="contact-btn">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <h1>Reliable accounting, smarter fleet management, trusted recruiting, and 24/7 assistance — built for trucking</h1>
-          <p class="lead">
-            We combine advanced telematics, attentive dispatching, and meticulous back-office support so carriers can focus on the road. Premium fleet management tailored for safety, compliance and profit.
-          </p>
-          <div class="hero-cta">
-            <a href="contact.html" class="btn primary">Get a Free Consultation</a>
-            <a href="services.html" class="btn outline">Explore Services</a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="truck-wrap" id="truckWrap">
-            <img src="images/truck-hero.png" alt="Aerotruck semi truck" class="truck-img" id="truckImg">
-            <!-- decorative light gradient overlay -->
-            <div class="truck-glow"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW WE HELP -->
-    <section class="how">
-      <div class="container">
-        <h2>How we help</h2>
-        <div class="grid four">
-          <div class="card">
-            <img src="images/icon-accounting.png" alt="">
-            <h3>Accounting</h3>
-            <p>Bookkeeping, fuel tax reporting, and payroll — focused on trucking nuances so your carrier stays compliant and profitable.</p>
-          </div>
-          <div class="card">
-            <img src="images/icon-fleet.png" alt="">
-            <h3>Fleet Management</h3>
-            <p>Telematics, maintenance planning, routing optimization, and real-time compliance monitoring to keep trucks moving safely.</p>
-          </div>
-          <div class="card">
-            <img src="images/icon-recruit.png" alt="">
-            <h3>Recruiting</h3>
-            <p>CDL hiring, screening, onboarding, and retention strategies — finding and keeping skilled drivers for your operation.</p>
-          </div>
-          <div class="card">
-            <img src="images/icon-assist.png" alt="">
-            <h3>24/7 Assistance</h3>
-            <p>Dispatch and roadside support anytime — we provide a single point of contact for urgent operational needs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section class="why">
-      <div class="container">
-        <h2>Why AeroTruck Solutions?</h2>
-        <div class="grid two">
-          <div>
-            <h3>Cost Optimization</h3>
-            <p>We uncover savings and avoid costly penalties by aligning operations, taxes, and fuel strategies to your routes and schedules.</p>
-
-            <h3>Compliance & Safety</h3>
-            <p>IFTA filing, ELD management, and proactive safety reviews help keep your fleet legally compliant and drivers safe on the road.</p>
-          </div>
-          <div>
-            <h3>Dedicated Account Manager</h3>
-            <p>Each client receives a single point of contact who understands your operation and coordinates dispatch, payroll, and regulatory tasks.</p>
-
-            <h3>Scalable Services</h3>
-            <p>Whether you run 5 or 500 trucks, we scale processes to fit — from full back-office outsourcing to targeted consulting.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="images/logo.png" alt="AeroTruck Solutions" class="footer-logo">
-        <p>AeroTruck Solutions Inc.<br>Chicago, IL, United States<br>Phone: +1 (708) 741-8002</p>
-      </div>
-      <div class="footer-right">
-        <nav>
-          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a>
-        </nav>
-        <p class="small">© <span id="year"></span> AeroTruck Solutions Inc. All rights reserved.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Reliable accounting, smarter fleet management, trusted recruiting, and 24/7 assistance — built for trucking</h1>
+      <p>We combine advanced telematics, attentive dispatching, and meticulous back-office support so carriers can focus on the road. Premium fleet management tailored for safety, compliance, and profit.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-red">Get a Free Consultation</a>
+        <a href="services.html" class="btn-dark">Explore Services</a>
       </div>
     </div>
-  </footer>
+    <div class="hero-image">
+      <img src="images/logo1.png" alt="Aerotruck semi truck">
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 AeroTruck Solutions Inc. | info@aerotrucksolutions.com | +1 (708) 741-8002</p>
+  </footer>
 </body>
 </html>
