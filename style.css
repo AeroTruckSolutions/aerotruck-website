@@ -1,92 +1,97 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0e0e0e;
-  color: white;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
 }
 
 .navbar {
-  background-color: #111;
-  padding: 15px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 5%;
+  background-color: #111;
 }
 
 .logo {
   height: 60px;
 }
 
-nav a {
-  color: #ccc;
-  margin-left: 25px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
 }
 
-nav a:hover, nav a.active {
-  color: white;
-}
-
 .contact-btn {
-  background: #b22222;
+  background-color: #b31d1d;
   padding: 8px 15px;
   border-radius: 5px;
-  color: white;
+  color: #fff;
 }
 
 .hero {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 80px 10%;
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  background: linear-gradient(to right, #0f0f0f, #1b1b1b);
 }
 
-.hero-text {
+.hero-content {
   max-width: 600px;
 }
 
-.hero-text h1 {
+.hero-content h1 {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.hero-text p {
-  font-size: 16px;
+.hero-content p {
   color: #ccc;
+  font-size: 16px;
   margin-bottom: 25px;
 }
 
-.hero-buttons a {
-  display: inline-block;
-  margin-right: 15px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
+.buttons {
+  display: flex;
+  gap: 15px;
 }
 
-.btn-red {
-  background-color: #b22222;
+.btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #b31d1d;
   color: white;
 }
 
-.btn-dark {
+.btn-secondary {
   background-color: #333;
   color: white;
 }
 
 .hero-image img {
-  width: 450px;
+  width: 420px;
   border-radius: 10px;
 }
 
-.footer {
-  background-color: #111;
-  color: #999;
+footer {
   text-align: center;
   padding: 20px;
+  background-color: #111;
+  color: #888;
   font-size: 14px;
 }
