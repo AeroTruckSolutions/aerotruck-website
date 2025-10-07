@@ -1,98 +1,67 @@
-/* ========== AEROTRUCK - interactive JS ========== */
-/* Responsibilities:
-   - update footer year
-   - reveal-on-scroll elements
-   - start truck drive-in animation and headlights blink
-   - small parallax on scroll for truck reflection
-   - contact form validation & mailto fallback
-*/
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Set current years in footers
+  const yrs = new Date().getFullYear();
+  for (let i=1;i<=6;i++) {
+    const el = document.getElementById('year' + (i===1 ? '' : i));
+    // some pages use different ids - ensure fallback
+    if (el) el.textContent = yrs;
+  }
+  // universal year targets
+  const yearEls = document.querySelectorAll('#year, #year2, #year3, #year4, #year5, #year6');
+  yearEls.forEach(e => e.textContent = yrs);
 
-document.addEventListener('DOMContentLoaded', () => {
-  // footer year auto-update
-  const y = document.getElementById('year');
-  if(y) y.textContent = new Date().getFullYear();
+  // nav toggle
+  const toggles = document.querySelectorAll('.nav-toggle');
+  toggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ul = btn.parentElement.querySelector('ul');
+      if (ul) ul.classList.toggle('show');
+    });
+  });
 
-  // Reveal on scroll (generic)
-  const io = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
+  // Truck parallax: move slightly as user scrolls
+  const truck = document.getElementById('truckImg');
+  const truckWrap = document.getElementById('truckWrap');
+  if (truck) {
+    window.addEventListener('scroll', onScrollTruck, {passive:true});
+    function onScrollTruck() {
+      const rect = truckWrap.getBoundingClientRect();
+      // calculate offset percentage inside viewport
+      const vh = window.innerHeight;
+      const centerOffset = (rect.top + rect.height/2 - vh/2) / (vh/2);
+      // clamp -1..1
+      const clamped = Math.max(-1, Math.min(1, centerOffset));
+      const x = clamped * -20; // move left/right (px)
+      const y = Math.abs(clamped) * -6; // small vertical shift
+      truck.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      // subtle opacity change
+      const op = 1 - Math.abs(clamped) * 0.08;
+      truck.style.opacity = op;
+    }
+    // initial call
+    onScrollTruck();
+  }
+
+  // Smooth anchor navigation
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const href = a.getAttribute('href');
+      if (href.length>1) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({behavior:'smooth'});
       }
     });
-  }, { threshold: 0.15 });
+  });
 
-  document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
-
-  // Truck animation logic (home page)
-  const truckImg = document.querySelector('.truck');
-  const headlights = document.querySelector('.headlights');
-
-  function startTruckSequence(){
-    if(!truckImg) return;
-    // start drive-in after short delay to allow header/hero to render
-    setTimeout(() => {
-      truckImg.classList.add('drive-in'); // CSS handles transform/opacity
-
-      // after truck completed motion, start blink sequence
-      setTimeout(() => {
-        if(headlights){
-          // blink sequence (3 blinks)
-          let blinks = 0;
-          const blinkInterval = setInterval(() => {
-            headlights.classList.toggle('blink-anim');
-            blinks++;
-            if(blinks >= 6){
-              clearInterval(blinkInterval);
-              // leave a soft dim glow
-              headlights.classList.add('blink-anim');
-              headlights.style.opacity = '0.28';
-            }
-          }, 350);
-        }
-      }, 1800);
-    }, 650);
-  }
-
-  // If truck in DOM and visible, start via observer; otherwise try immediate
-  if(truckImg){
-    const tIo = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          startTruckSequence();
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.35 });
-    tIo.observe(truckImg);
-  }
-
-  // small parallax effect for truck on scroll
-  window.addEventListener('scroll', () => {
-    const t = document.querySelector('.truck');
-    if(!t) return;
-    const rect = t.getBoundingClientRect();
-    const offset = Math.max(-12, Math.min(40, (window.innerHeight/2 - rect.top) * 0.02));
-    t.style.transform = `translateX(${offset}px)`;
-  }, { passive: true });
-
-  // Contact form: simple validation + mailto fallback
-  const contactForm = document.getElementById('contactForm');
-  if(contactForm){
-    contactForm.addEventListener('submit', (e) => {
+  // Contact form (simple client-side demo)
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const name = document.getElementById('name')?.value.trim() || '';
-      const email = document.getElementById('email')?.value.trim() || '';
-      const message = document.getElementById('message')?.value.trim() || '';
-      if(!name || !email){
-        alert('Please enter your name and email.');
-        return;
-      }
-      // Build mailto fallback
-      const subject = encodeURIComponent('Website Inquiry from ' + name);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-      window.location.href = `mailto:info@aerotrucksolutions.com?subject=${subject}&body=${body}`;
+      alert('Message sent (demo). Replace this with your form handling / POST endpoint.');
+      form.reset();
     });
   }
-
-}); // DOMContentLoaded
+});
