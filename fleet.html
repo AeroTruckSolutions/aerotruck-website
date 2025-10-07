@@ -3,51 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fleet Portal — Aerotruck Solutions</title>
-  <meta name="description" content="Secure fleet portal for Aerotruck clients: tracking, reports, pay, and compliance.">
+  <title>Fleet Portal — AeroTruck Solutions</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html"><img src="images/logo1.png" class="brand-logo" alt="logo"></a>
+      <a href="index.html" class="brand"><img src="images/logo.png" alt="AeroTruck Solutions" class="brand-logo"></a>
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="fleet.html" class="active">Fleet Portal</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html" class="btn">Contact</a></li>
+          <li><a href="contact.html" class="btn contact-btn">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-section">
-      <div class="container reveal-up">
-        <h2>Fleet Portal</h2>
-        <p>Our Fleet Portal centralizes trip data, driver settlements, maintenance scheduling, and compliance records — secure, reliable, and accessible 24/7 for clients with valid credentials.</p>
+  <main class="page">
+    <section class="page-hero dark">
+      <div class="container">
+        <h1>Fleet Portal</h1>
+        <p class="lead">A single place for telematics, maintenance alerts, and driver performance — designed to remove guesswork from daily operations.</p>
+      </div>
+    </section>
 
-        <div style="margin-top:18px" class="card reveal-up">
-          <h3>Portal Features</h3>
-          <ul style="color:var(--muted);">
-            <li>Live GPS tracking & ETA</li>
-            <li>Driver payroll & settlement history</li>
-            <li>IFTA & fuel usage analytics</li>
-            <li>Maintenance logs & service scheduling</li>
-            <li>Compliance document archive</li>
-          </ul>
-        </div>
+    <section class="portal-details">
+      <div class="container">
+        <h2>What you get</h2>
+        <p>Integration with ELD/telematics vendors, automated maintenance reminders, exception reporting, and driver scorecards. Our portal summarizes KPI trends so your team can prioritize repairs and coaching that deliver measurable uptime improvements.</p>
       </div>
     </section>
   </main>
 
+  <!-- footer -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Aerotruck Solutions</p>
-      <p><a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a> | +1 (708) 741-8002</p>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="images/logo.png" alt="AeroTruck Solutions" class="footer-logo">
+        <p>AeroTruck Solutions Inc.<br>Chicago, IL, United States<br>Phone: +1 (708) 741-8002</p>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a>
+        </nav>
+        <p class="small">© <span id="year4"></span> AeroTruck Solutions Inc. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
