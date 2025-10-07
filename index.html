@@ -1,212 +1,124 @@
 <!doctype html>
-<html lang="lt">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aerotruck Solutions — Premium Fleet Services</title>
-  <meta name="description" content="Aerotruck Solutions — premium fleet management, accounting & payroll, driver recruiting and 24/7 operational support for smart carriers.">
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* === BENDRAS STILIUS === */
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* === HEADER === */
-    .site-header {
-      background-color: #0d0d0d;
-      padding: 15px 0;
-      border-bottom: 1px solid #1f1f1f;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand-logo {
-      height: 80px;
-      width: auto;
-      display: block;
-      filter: drop-shadow(0px 0px 6px rgba(0,0,0,0.5));
-      transition: transform 0.3s ease;
-    }
-
-    .brand-logo:hover {
-      transform: scale(1.05);
-    }
-
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .main-nav a {
-      font-weight: 600;
-      color: #fff;
-      transition: color 0.3s ease;
-    }
-
-    .main-nav a:hover {
-      color: #d51b1b;
-    }
-
-    .contact-btn {
-      background-color: #d51b1b;
-      padding: 10px 18px;
-      border-radius: 6px;
-    }
-
-    .contact-btn:hover {
-      background-color: #a01414;
-      color: #fff;
-    }
-
-    /* === HERO SECTION === */
-    .hero-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px 60px;
-      background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 100%);
-    }
-
-    .hero-content {
-      flex: 1;
-      padding-right: 40px;
-    }
-
-    .hero-content h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .hero-content p {
-      font-size: 18px;
-      color: #ccc;
-      max-width: 550px;
-    }
-
-    .hero-buttons {
-      margin-top: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .primary-btn {
-      background: #d51b1b;
-      color: #fff;
-    }
-
-    .primary-btn:hover {
-      background: #a01414;
-    }
-
-    .secondary-btn {
-      background: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-      margin-left: 15px;
-    }
-
-    .secondary-btn:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    .hero-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .truck-image {
-      width: 100%;
-      max-width: 520px;
-      height: auto;
-      mix-blend-mode: multiply;
-      filter: brightness(1.1) contrast(1.1);
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .truck-image:hover {
-      transform: scale(1.03);
-      opacity: 0.95;
-    }
-
-    /* === FOOTER === */
-    footer {
-      text-align: center;
-      padding: 40px 0;
-      background-color: #0d0d0d;
-      border-top: 1px solid #1f1f1f;
-      color: #aaa;
-      font-size: 14px;
-    }
-  </style>
+  <title>AeroTruck Solutions — Reliable fleet services</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" aria-label="Aerotruck Solutions home">
-        <img src="images/logo.png" alt="Aerotruck Solutions logo" class="brand-logo">
+      <a href="index.html" class="brand" aria-label="AeroTruck Solutions home">
+        <img src="images/logo.png" alt="AeroTruck Solutions logo" class="brand-logo">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" id="mainNav">
         <ul>
+          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="fleet.html">Fleet Portal</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html" class="btn contact-btn">Contact</a></li>
         </ul>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
       </nav>
     </div>
   </header>
 
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1>Driven by precision.<br>Powered by trust.</h1>
-      <p>We combine advanced telematics, attentive dispatching, and meticulous back-office support so carriers can focus on the road. Premium fleet management tailored for safety, compliance and profit.</p>
-      <div class="hero-buttons">
-        <a href="services.html" class="btn primary-btn">Explore Services</a>
-        <a href="contact.html" class="btn secondary-btn">Get a Quote</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Reliable accounting, smarter fleet management, trusted recruiting, and 24/7 assistance — built for trucking</h1>
+          <p class="lead">
+            We combine advanced telematics, attentive dispatching, and meticulous back-office support so carriers can focus on the road. Premium fleet management tailored for safety, compliance and profit.
+          </p>
+          <div class="hero-cta">
+            <a href="contact.html" class="btn primary">Get a Free Consultation</a>
+            <a href="services.html" class="btn outline">Explore Services</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="truck-wrap" id="truckWrap">
+            <img src="images/truck-hero.png" alt="Aerotruck semi truck" class="truck-img" id="truckImg">
+            <!-- decorative light gradient overlay -->
+            <div class="truck-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE HELP -->
+    <section class="how">
+      <div class="container">
+        <h2>How we help</h2>
+        <div class="grid four">
+          <div class="card">
+            <img src="images/icon-accounting.png" alt="">
+            <h3>Accounting</h3>
+            <p>Bookkeeping, fuel tax reporting, and payroll — focused on trucking nuances so your carrier stays compliant and profitable.</p>
+          </div>
+          <div class="card">
+            <img src="images/icon-fleet.png" alt="">
+            <h3>Fleet Management</h3>
+            <p>Telematics, maintenance planning, routing optimization, and real-time compliance monitoring to keep trucks moving safely.</p>
+          </div>
+          <div class="card">
+            <img src="images/icon-recruit.png" alt="">
+            <h3>Recruiting</h3>
+            <p>CDL hiring, screening, onboarding, and retention strategies — finding and keeping skilled drivers for your operation.</p>
+          </div>
+          <div class="card">
+            <img src="images/icon-assist.png" alt="">
+            <h3>24/7 Assistance</h3>
+            <p>Dispatch and roadside support anytime — we provide a single point of contact for urgent operational needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why">
+      <div class="container">
+        <h2>Why AeroTruck Solutions?</h2>
+        <div class="grid two">
+          <div>
+            <h3>Cost Optimization</h3>
+            <p>We uncover savings and avoid costly penalties by aligning operations, taxes, and fuel strategies to your routes and schedules.</p>
+
+            <h3>Compliance & Safety</h3>
+            <p>IFTA filing, ELD management, and proactive safety reviews help keep your fleet legally compliant and drivers safe on the road.</p>
+          </div>
+          <div>
+            <h3>Dedicated Account Manager</h3>
+            <p>Each client receives a single point of contact who understands your operation and coordinates dispatch, payroll, and regulatory tasks.</p>
+
+            <h3>Scalable Services</h3>
+            <p>Whether you run 5 or 500 trucks, we scale processes to fit — from full back-office outsourcing to targeted consulting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="images/logo.png" alt="AeroTruck Solutions" class="footer-logo">
+        <p>AeroTruck Solutions Inc.<br>Chicago, IL, United States<br>Phone: +1 (708) 741-8002</p>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a>
+        </nav>
+        <p class="small">© <span id="year"></span> AeroTruck Solutions Inc. All rights reserved.</p>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="images/truck.png" alt="Aerotruck Solutions semi truck" class="truck-image">
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Aerotruck Solutions. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
