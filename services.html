@@ -1,67 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Services — Aerotruck Solutions</title>
+  <meta name="description" content="Aerotruck Solutions services: Fleet Management, Dispatch, Accounting, Driver Recruiting and 24/7 Operational Support.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo1.png" alt="Logo" class="logo">
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="fleet.html">Fleet Portal</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html" class="btn">Contact</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html"><img src="images/logo1.png" class="brand-logo" alt="logo"></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="fleet.html">Fleet</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html" class="btn">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <section class="page-hero">
-    <h1>Our Services</h1>
-    <p>End-to-end logistics support designed for growth and reliability.</p>
-  </section>
+  <main>
+    <section class="page-section">
+      <div class="container reveal-up">
+        <h2>Our Services</h2>
+        <p>We provide a full suite of services to run a modern, compliant, and profitable fleet.</p>
 
-  <section class="content">
+        <div class="services-grid" style="margin-top:22px">
+          <div class="card reveal-up">
+            <h3>Fleet Management</h3>
+            <p>Real-time telematics, maintenance planning and advanced reporting that increase uptime and reduce costs across your fleet.</p>
+          </div>
+
+          <div class="card reveal-up">
+            <h3>Dispatch & Routing</h3>
+            <p>Optimized routing, proactive ETA updates and human-in-the-loop dispatch to ensure seamless operations and customer satisfaction.</p>
+          </div>
+
+          <div class="card reveal-up">
+            <h3>Accounting & Payroll</h3>
+            <p>Complete back-office service including settlements, driver pay, IFTA, and detailed financial reporting for transparency.</p>
+          </div>
+
+          <div class="card reveal-up">
+            <h3>Driver Recruiting & Retention</h3>
+            <p>Experienced recruiting teams sourcing qualified drivers and supporting long-term retention strategies through training and incentives.</p>
+          </div>
+
+          <div class="card reveal-up">
+            <h3>Compliance & Safety</h3>
+            <p>ELD monitoring, safety score tracking and regulatory support to keep your operation compliant and drivers safe on the road.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      <div class="service">
-        <h2>Fleet Management</h2>
-        <p>Our advanced tracking, maintenance scheduling, and reporting tools keep your fleet in top shape. Real-time analytics provide deep insight into performance, fuel efficiency, and operational costs.</p>
-      </div>
-
-      <div class="service">
-        <h2>Dispatch & Operations</h2>
-        <p>24/7 professional dispatchers manage every load with precision — maximizing utilization while keeping communication clear and consistent with both drivers and customers.</p>
-      </div>
-
-      <div class="service">
-        <h2>Accounting & Payroll</h2>
-        <p>We manage your back-office tasks seamlessly. From invoicing and settlements to driver payroll and expense reports, we ensure accuracy and transparency across every transaction.</p>
-      </div>
-
-      <div class="service">
-        <h2>Driver Recruiting</h2>
-        <p>We connect fleets with reliable, qualified drivers who match their culture and growth goals. Our HR specialists handle screening, onboarding, and compliance documentation.</p>
-      </div>
-
-      <div class="service">
-        <h2>Compliance & Safety</h2>
-        <p>Stay ELD and DOT-compliant effortlessly. Our experts monitor regulations and ensure your operation meets every safety standard in the U.S. trucking industry.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Aerotruck Solutions. All rights reserved.</p>
+      <p>© <span id="year"></span> Aerotruck Solutions</p>
       <p><a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a> | +1 (708) 741-8002</p>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
