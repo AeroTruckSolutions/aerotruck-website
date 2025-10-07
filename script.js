@@ -1,67 +1,64 @@
-// ✅ Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.mobile-toggle');
-  const nav = document.querySelector('.main-nav');
-
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      if (nav) {
-        if (!expanded) {
-          nav.style.display = 'flex';
-          nav.style.flexDirection = 'column';
-          nav.style.gap = '12px';
-          nav.style.position = 'absolute';
-          nav.style.right = '20px';
-          nav.style.top = '70px';
-          nav.style.background = 'rgba(6,7,10,0.95)';
-          nav.style.padding = '14px';
-          nav.style.borderRadius = '12px';
-        } else {
-          nav.style.display = '';
-          nav.style.position = '';
-          nav.style.top = '';
-          nav.style.right = '';
-          nav.style.background = '';
-          nav.style.padding = '';
-          nav.style.borderRadius = '';
-          nav.style.gap = '';
-        }
-      }
+// script.js
+document.addEventListener('DOMContentLoaded', function(){
+  // NAV TOGGLE (mobile)
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  if(navToggle && mainNav){
+    navToggle.addEventListener('click', function(){
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      if(mainNav.style.display === 'block') mainNav.style.display = '';
+      else mainNav.style.display = 'block';
     });
   }
 
-  // ✅ Smooth scrolling for in-page anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function (e) {
+  // Footer year
+  const y = new Date().getFullYear();
+  const el = document.getElementById('year');
+  if(el) el.textContent = y;
+
+  // IntersectionObserver for reveal animations
+  const revealEls = document.querySelectorAll('.reveal-up, .reveal-section, .animate-slide-in');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        // if we only want animation once, unobserve
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => io.observe(el));
+
+  // Truck subtle parallax follow on scroll (small effect)
+  const truck = document.getElementById('truckImg');
+  if(truck){
+    // Also animate it to slide in when observed (using the intersection observer above)
+    io.observe(truck);
+
+    // Add parallax on scroll
+    window.addEventListener('scroll', function(){
+      const rect = truck.getBoundingClientRect();
+      // compute a value based on distance from center
+      const offset = Math.max(-120, Math.min(120, (window.innerHeight / 2 - rect.top) * 0.06));
+      truck.style.transform = `translateX(${Math.min(0, 40 - offset)}px) translateY(${offset*0.05}px) scale(1)`;
+    }, { passive: true });
+  }
+
+  // Smooth anchor scrolling for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const href = this.getAttribute('href');
+      const target = document.querySelector(href);
+      if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
-  // ✅ Truck animation (entry + lights blinking)
-  const truck = document.querySelector('.truck-animation');
-  if (truck) {
-    // Start truck entry animation
-    truck.classList.add('truck-animated');
-
-    // Simulate headlights flashing (optional)
-    setTimeout(() => {
-      truck.style.filter = 'brightness(1.4) drop-shadow(0 0 18px rgba(255,255,180,0.6))';
-    }, 2200); // when truck finishes entering
-
-    setTimeout(() => {
-      truck.style.filter = 'brightness(1) drop-shadow(0 0 10px rgba(255,255,255,0.2))';
-    }, 2700);
-
-    setTimeout(() => {
-      truck.style.filter = 'brightness(1.3) drop-shadow(0 0 16px rgba(255,255,200,0.5))';
-    }, 3100);
-
-    setTimeout(() => {
-      truck.style.filter = 'brightness(1) drop-shadow(0 0 8px rgba(255,255,255,0.2))';
-    }, 3500);
+  // Very small performance safeguard: reduce heavy scroll work on small devices
+  if(window.innerWidth < 600){
+    // ease off parallax
+    if(truck) truck.style.transition = 'transform 600ms ease';
   }
 });
