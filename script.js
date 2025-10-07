@@ -1,4 +1,4 @@
-// Mobile menu toggle
+// ✅ Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.querySelector('.mobile-toggle');
   const nav = document.querySelector('.main-nav');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Smooth scrolling for in-page anchors (if used)
+  // ✅ Smooth scrolling for in-page anchors
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
       e.preventDefault();
@@ -40,4 +40,28 @@ document.addEventListener('DOMContentLoaded', function () {
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // ✅ Truck animation (entry + lights blinking)
+  const truck = document.querySelector('.truck-animation');
+  if (truck) {
+    // Start truck entry animation
+    truck.classList.add('truck-animated');
+
+    // Simulate headlights flashing (optional)
+    setTimeout(() => {
+      truck.style.filter = 'brightness(1.4) drop-shadow(0 0 18px rgba(255,255,180,0.6))';
+    }, 2200); // when truck finishes entering
+
+    setTimeout(() => {
+      truck.style.filter = 'brightness(1) drop-shadow(0 0 10px rgba(255,255,255,0.2))';
+    }, 2700);
+
+    setTimeout(() => {
+      truck.style.filter = 'brightness(1.3) drop-shadow(0 0 16px rgba(255,255,200,0.5))';
+    }, 3100);
+
+    setTimeout(() => {
+      truck.style.filter = 'brightness(1) drop-shadow(0 0 8px rgba(255,255,255,0.2))';
+    }, 3500);
+  }
 });
