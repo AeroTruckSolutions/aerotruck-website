@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aerotruck Solutions — Reliable fleet services</title>
-  <meta name="description" content="Aerotruck Solutions — reliable accounting, smarter fleet management, trusted recruiting and 24/7 assistance for trucking companies.">
+  <title>Aerotruck Solutions — Premium Fleet Services</title>
+  <meta name="description" content="Aerotruck Solutions — premium fleet management, accounting & payroll, driver recruiting and 24/7 operational support for smart carriers.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Aerotruck Solutions Home">
+      <a class="brand" href="index.html" aria-label="Aerotruck Solutions">
         <img src="imagines/logo.png" alt="Aerotruck Solutions logo" class="brand-logo">
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
         <ul>
           <li><a href="services.html">Services</a></li>
           <li><a href="fleet.html">Fleet Portal</a></li>
@@ -30,59 +31,103 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <main>
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="container hero-grid">
-        <div class="hero-left">
-          <h1>Reliable accounting, smarter fleet management,<br>trusted recruiting, and 24/7 assistance —</h1>
-          <p class="lead">We keep fleets moving: reduce operating costs, stay compliant, and hire dependable drivers — all under one roof.</p>
+        <div class="hero-left flow">
+          <h1 class="reveal-up">Reliable accounting, smarter fleet management, trusted recruiting, and 24/7 assistance —</h1>
+          <p class="lead reveal-up delay-05">We keep fleets moving. Reduce operating costs, stay compliant, and hire dependable drivers — all under one roof with transparent reporting and dedicated account management.</p>
 
-          <div class="hero-ctas">
+          <div class="hero-ctas reveal-up delay-1">
             <a href="contact.html" class="btn primary">Get a Free Consultation</a>
             <a href="fleet.html" class="btn outline">Request Fleet Demo</a>
           </div>
 
-          <ul class="hero-features">
-            <li>250+ Trucks Managed</li>
-            <li>24/7 Support</li>
-            <li>98% On-time Payroll</li>
+          <ul class="hero-features reveal-up delay-15">
+            <li><strong>250+</strong> Trucks Managed</li>
+            <li><strong>24/7</strong> Operations & Driver Support</li>
+            <li><strong>98%</strong> On-time Payroll & Settlements</li>
           </ul>
+
+          <div class="long-description reveal-up delay-2">
+            <h2>Why carriers choose us</h2>
+            <p>
+              At Aerotruck Solutions we combine deep industry knowledge with modern cloud tools. Our expertise covers safety/compliance programs, dedicated account teams for payroll
+              and settlement accuracy, fuel tax (IFTA) and mileage reconciliation, and bespoke driver recruiting pipelines. We integrate telematics and routing to minimize empty miles
+              and optimize total cost per mile (TCM). Our approach is consultative: we measure, report, and continuously optimize your operation so your fleet runs leaner and safer.
+            </p>
+
+            <p>
+              From onboarding to dispatch optimization and payroll execution, our technology-first model ensures transparency and reduces friction between operations and accounting.
+              Executives get clean KPIs; drivers get timely pay, and managers keep assets moving. Partner with a team built by carriers for carriers.
+            </p>
+          </div>
         </div>
 
-        <div class="hero-right" aria-hidden="false">
-          <img src="imagines/truck.png" alt="AeroTruck Solutions truck" class="truck-img">
+        <div class="hero-right">
+          <!-- Truck animation: starts off-canvas and slides in with subtle parallax -->
+          <figure class="truck-wrap">
+            <img src="imagines/truck.png" alt="AeroTruck Solutions truck" class="truck-img animate-slide-in" id="truckImg">
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="services-preview container">
-      <h2>Our core services</h2>
+    <!-- SERVICES PREVIEW -->
+    <section class="services-preview container reveal-section" id="servicesPreview">
+      <h2>Core capabilities</h2>
       <div class="cards">
         <article class="card">
-          <h3>Fleet Management</h3>
-          <p>Dispatch, routing and telematics integration to keep trucks productive and compliant.</p>
+          <h3>Fleet Management & Dispatch</h3>
+          <p>From route planning and telematics to load assignment, we deliver real-time operational orchestration that reduces empty miles and idle time.</p>
         </article>
+
         <article class="card">
           <h3>Accounting & Payroll</h3>
-          <p>Accurate payroll, trip-pay processing, fuel tax (IFTA) reporting and audits covered.</p>
+          <p>Full payroll processing, driver settlements, AP/AR management and reliable tax reporting so your finance team sleeps easier.</p>
         </article>
+
         <article class="card">
-          <h3>Driver Recruitment</h3>
-          <p>Experienced drivers sourced, screened, and placed — with training and onboarding.</p>
+          <h3>Recruiting & Driver Care</h3>
+          <p>Robust recruitment funnel, screening and onboarding processes designed to keep retention high and turnover low.</p>
         </article>
       </div>
-      <p class="more-link"><a href="services.html">View all services →</a></p>
+      <p class="more-link"><a href="services.html">View full service portfolio →</a></p>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="about-preview container reveal-section">
+      <h2>Trusted by carriers — built by drivers</h2>
+      <div class="two-col">
+        <div>
+          <p>We deliver flexible engagement models: dedicated dispatch, full-managed fleet, or modular support. You choose the level of control — we provide the expertise and people to execute reliably.</p>
+        </div>
+        <div>
+          <p>Operational excellence is our baseline. We prioritize safety, compliance, and on-time settlements — and use automated workflows to cut manual work so your people can focus on performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-dark container reveal-section">
+      <div class="cta-content">
+        <h3>Ready to reduce cost per mile and increase driver retention?</h3>
+        <p>Schedule a detailed operational review — we’ll present a short, actionable plan tailored to your fleet.</p>
+        <a href="contact.html" class="btn primary">Request a Fleet Review</a>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-left">
-        <img src="imagines/logo.png" alt="Aerotruck logo small" class="footer-logo">
-        <p>© <span id="year"></span> Aerotruck Solutions Inc.</p>
+        <img src="imagines/logo.png" alt="Aerotruck logo" class="footer-logo">
+        <p>© <span id="year"></span> Aerotruck Solutions Inc. — Trusted fleet partners</p>
       </div>
       <div class="footer-right">
-        <nav class="footer-nav" aria-label="Footer">
+        <nav class="footer-nav">
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
