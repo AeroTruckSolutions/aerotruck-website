@@ -1,6 +1,6 @@
 # aerotruck-website
 
-Marketing website for **Aerotruck Solutions Inc.** — premium dark-themed design, responsive, with animated hero and clear service pages.
+Premium marketing website for **Aerotruck Solutions Inc.** — dark theme, responsive, with hero truck animation.
 
 ## Files
 - index.html
@@ -11,16 +11,17 @@ Marketing website for **Aerotruck Solutions Inc.** — premium dark-themed desig
 - contact.html
 - style.css
 - script.js
-- imagines/logo.png
-- imagines/truck.png
+- images/truck.png      (logo — white letters on red round mark)
+- images/truck1.png     (truck image with transparent background)
 
-## Deploy
-1. Place files in repo root.
-2. Create folder `imagines/` and upload `logo.png` and `truck.png`.
-3. Enable GitHub Pages (main branch / root).
-4. Visit `https://<username>.github.io/aerotruck-website/`.
+## How to deploy
+1. Put all `.html`, `style.css` and `script.js` in repository root.
+2. Create folder `images/` and add `truck.png` and `truck1.png`.
+3. Commit & push to `main`.
+4. Enable GitHub Pages (branch `main`, root) in repo Settings if not already enabled.
+5. Wait ~1–2 minutes and visit `https://<username>.github.io/<repo>/index.html`.
 
 ## Notes
-- Logo must have white letters on a red round mark (PNG with transparency) so it looks correct on dark background.
-- Truck image must be PNG with transparent background for the hero animation.
-- If you want vector logo (SVG) instead, replace `imagines/logo.png` with `imagines/logo.svg` and keep the `img` tag src updated.
+- The header shows contact email and phone (clickable).
+- The hero truck animation appears only on `index.html`.
+- If you prefer SVG logo, replace `images/truck.png` and keep `<img>` src updated.
