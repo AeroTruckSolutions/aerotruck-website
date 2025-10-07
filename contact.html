@@ -1,53 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Aerotruck Solutions</title>
+  <meta name="description" content="Contact Aerotruck Solutions for fleet services, dispatch, accounting and driver recruiting.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo1.png" alt="Logo" class="logo">
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="fleet.html">Fleet Portal</a>
-        <a href="careers.html">Careers</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html"><img src="images/logo1.png" class="brand-logo" alt="logo"></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="fleet.html">Fleet</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html" class="active btn">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <section class="page-hero">
-    <h1>Contact Us</h1>
-    <p>We’re here 24/7 to assist your fleet, drivers, and operations.</p>
-  </section>
+  <main>
+    <section class="page-section">
+      <div class="container reveal-up">
+        <h2>Contact Us</h2>
+        <p>We’re here to support your fleet and drivers. Reach out for quotes, onboarding, or operations support.</p>
 
-  <section class="content">
-    <div class="container">
-      <form id="contactForm" class="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Email Address" required>
-        <textarea id="message" rows="6" placeholder="Your Message"></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+        <div style="display:flex; gap:32px; margin-top:18px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:280px">
+            <form id="contactForm" class="reveal-up" style="max-width:520px">
+              <input id="name" class="input" type="text" placeholder="Full Name" required />
+              <input id="email" class="input" type="email" placeholder="Email address" required />
+              <textarea id="message" class="input" rows="6" placeholder="How can we help?"></textarea>
+              <button type="submit" class="btn" style="width:100%; margin-top:10px">Send Message</button>
+            </form>
+          </div>
 
-      <div class="contact-info">
-        <h3>Contact Details</h3>
-        <p><strong>Email:</strong> <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a></p>
-        <p><strong>Phone:</strong> +1 (708) 741-8002</p>
-        <p><strong>Location:</strong> United States</p>
+          <div style="flex:1; min-width:260px" class="reveal-up">
+            <div class="card">
+              <h3>Contact Details</h3>
+              <p><strong>Email:</strong> <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a></p>
+              <p><strong>Phone:</strong> +1 (708) 741-8002</p>
+              <p><strong>Location:</strong> Chicago, IL, USA</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Aerotruck Solutions. All rights reserved.</p>
+      <p>© <span id="year"></span> Aerotruck Solutions</p>
       <p><a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a> | +1 (708) 741-8002</p>
     </div>
   </footer>
