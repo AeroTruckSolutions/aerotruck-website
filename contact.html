@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="lt">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Aerotruck Solutions</title>
-  <meta name="description" content="Contact Aerotruck Solutions for fleet services, demos or support.">
+  <meta name="description" content="Contact Aerotruck Solutions for demos, pricing or support.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="imagines/logo.png" alt="logo" class="brand-logo"></a>
+      <a class="brand" href="index.html"><img src="images/truck.png" class="brand-logo" alt="logo"><span class="brand-text">AEROTRUCK SOLUTIONS INC.</span></a>
+
       <nav class="main-nav" id="mainNav">
         <ul>
           <li><a href="services.html">Services</a></li>
@@ -20,39 +21,48 @@
           <li><a href="contact.html" aria-current="page" class="btn contact-btn">Contact</a></li>
         </ul>
       </nav>
-      <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+      <div class="header-contacts">
+        <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a>
+        <a href="tel:+17087418002">+1 (708) 741-8002</a>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main class="container content">
+  <main class="container content reveal-section">
     <h1>Contact</h1>
-    <p class="lead">Get in touch for demos, pricing or support.</p>
+    <p class="lead">Request a demo, pricing or operational review. We respond quickly to qualified carrier inquiries.</p>
 
     <div class="contact-grid">
-      <form class="contact-form" id="contactForm" action="mailto:info@aerotrucksolutions.com" method="post" enctype="text/plain">
+      <form id="contactForm" class="contact-form" method="post" action="mailto:info@aerotrucksolutions.com" enctype="text/plain">
         <label for="name">Full name</label>
         <input id="name" name="name" type="text" required>
+
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text">
 
         <label for="email">Email</label>
         <input id="email" name="email" type="email" required>
 
         <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel">
+        <input id="phone" name="phone" type="tel" value="+1 (708) 741-8002">
 
-        <label for="message">Message</label>
+        <label for="message">How can we help?</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
         <div class="form-actions">
-          <button type="submit" class="btn primary">Send message</button>
+          <button class="btn primary" type="submit">Send message</button>
         </div>
-        <p class="note">If mail client is not available, please email: <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a></p>
+        <p class="note">Prefer email? <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a></p>
       </form>
 
       <aside class="contact-info">
-        <h3>Office</h3>
-        <p>Aerotruck Solutions Inc.<br>Headquarters (example address)<br>Phone: (555) 123-4567</p>
+        <h3>Headquarters</h3>
+        <p>Aerotruck Solutions Inc.<br> Chicago, IL, United States<br> Phone: <a href="tel:+17087418002">+1 (708) 741-8002</a></p>
+
         <h3>Support</h3>
-        <p>Email: <a href="mailto:support@aerotrucksolutions.com">support@aerotrucksolutions.com</a></p>
+        <p><a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a></p>
       </aside>
     </div>
   </main>
@@ -60,8 +70,11 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-left">
-        <img src="imagines/logo.png" alt="Aerotruck logo" class="footer-logo">
-        <p>© <span id="year"></span> Aerotruck Solutions Inc.</p>
+        <img src="images/truck.png" alt="logo" class="footer-logo">
+        <div>
+          <p>© <span id="year"></span> Aerotruck Solutions Inc.</p>
+          <p><a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a> &nbsp; | &nbsp; <a href="tel:+17087418002">+1 (708) 741-8002</a></p>
+        </div>
       </div>
       <div class="footer-right">
         <nav class="footer-nav">
