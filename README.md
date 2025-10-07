@@ -1,9 +1,9 @@
-# Aerotruck Solutions Website
+# Aerotruck Solutions — Premium Night Theme Website
 
-Premium dark-theme website for **Aerotruck Solutions** — built for fleet, logistics, and driver management services.  
-Includes truck hero animation, glowing headlights, and professional modern UI.
+Professional dark-mode marketing website for Aerotruck Solutions Inc.  
+Features: animated truck hero (night road + starry sky), glowing headlights, parallax effects, responsive layout, and full multi-page structure.
 
-## 🧱 Files
+## Files (place in repository root)
 - index.html
 - about.html
 - services.html
@@ -12,21 +12,26 @@ Includes truck hero animation, glowing headlights, and professional modern UI.
 - contact.html
 - style.css
 - script.js
-- images/logo1.png (company logo, transparent background)
-- images/truck.png (truck image with transparent background)
+- images/
+  - logo1.png
+  - ChatGPT Image Oct 6, 2025, 10_38_53 PM.png
 
-## ⚙️ How to Use
-1. Place all files in repository root.
-2. Create folder `/images` with both images inside.
-3. Deploy via GitHub Pages → Settings → Pages → Branch: `main` → Folder: `/root`.
-4. Open your page: `https://<username>.github.io/aerotruck-website/`
+## Quick deploy (GitHub Pages)
+1. Ensure all `.html`, `style.css`, and `script.js` are in repo root.
+2. Create `images/` folder and add image files (transparent PNGs).
+3. Commit & push to `main`.
+4. Settings → Pages → Source: `main` branch, Folder: `/ (root)`.
+5. Wait ~1–2 minutes and open:
+   `https://<username>.github.io/<repo>/`
 
-## 📞 Contact
+## Notes
+- All pages use the same header & footer for consistent branding.
+- Truck hero animation (and headlights) run on the home page only.
+- Contact and Careers pages include forms (front-end validation + mailto fallback).
+- If images appear with white background, regenerate PNGs with transparency (e.g., remove.bg) before uploading.
+
+## Contact
 - Email: info@aerotrucksolutions.com  
-- Phone: +1 (708) 741-8002  
-- Careers / Apply: info@aerotrucksolutions.com
+- Phone: +1 (708) 741-8002
 
-## ✨ Notes
-- Truck animation & glowing headlights appear only on `index.html`.
-- Fully responsive (mobile + desktop).
-- Built with HTML5, CSS3, and vanilla JavaScript.
+© 2025 Aerotruck Solutions Inc.
