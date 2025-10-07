@@ -16,7 +16,7 @@ Premium marketing website for **Aerotruck Solutions Inc.** — dark theme, respo
 
 ## How to deploy
 1. Put all `.html`, `style.css` and `script.js` in repository root.
-2. Create folder `images/` and add `truck.png` and `truck1.png`.
+2. Create folder `images/` and add `logo.png` and `truck2.png`.
 3. Commit & push to `main`.
 4. Enable GitHub Pages (branch `main`, root) in repo Settings if not already enabled.
 5. Wait ~1–2 minutes and visit `https://<username>.github.io/<repo>/index.html`.
