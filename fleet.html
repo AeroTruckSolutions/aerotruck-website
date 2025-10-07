@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fleet Portal | Aerotruck Solutions</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleet Portal — Aerotruck Solutions</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="main-header">
+  <header class="header">
     <div class="container">
-      <a href="index.html" class="logo"><img src="logo1.png" alt="Logo"></a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="fleet.html" class="active">Fleet</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <a href="index.html" class="logo-link">
+        <img src="images/logo1.png" alt="Logo" class="logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="page-hero">
     <h1>Fleet Portal</h1>
-    <p>Secure, efficient and connected — manage your fleet performance anytime, anywhere.</p>
+    <p>Access your fleet information securely anytime, anywhere.</p>
   </section>
 
-  <section class="content-section">
+  <section class="content">
     <div class="container">
-      <p>Our advanced Fleet Portal offers real-time tracking, analytics dashboards, fuel optimization tools, and maintenance scheduling features — all designed to maximize uptime and reduce costs. Coming soon for Aerotruck clients.</p>
+      <p>Welcome to the Aerotruck Fleet Portal — your all-in-one access point for trip data, payroll summaries, fuel reports, and compliance updates.  
+      Use your assigned credentials to log in and manage your fleet efficiently.</p>
+
+      <div class="login-box">
+        <form>
+          <input type="text" placeholder="Email or Username" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit" class="btn">Login</button>
+        </form>
+      </div>
+
+      <p class="note">Having trouble logging in? Contact <a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a></p>
     </div>
   </section>
 
-  <footer>
-    <div class="footer-container">
-      <img src="logo1.png" class="footer-logo" alt="Aerotruck Logo">
-      <p>info@aerotrucksolutions.com | +1 (708) 741-8002</p>
-      <p>&copy; <span id="year"></span> Aerotruck Solutions Inc. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Aerotruck Solutions. All rights reserved.</p>
+      <p><a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a> | +1 (708) 741-8002</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
