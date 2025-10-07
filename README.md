@@ -1,37 +1,66 @@
-# Aerotruck Solutions — Premium Night Theme Website
+# 🚛 AeroTruck Solutions — Premium Fleet Services
 
-Professional dark-mode marketing website for Aerotruck Solutions Inc.  
-Features: animated truck hero (night road + starry sky), glowing headlights, parallax effects, responsive layout, and full multi-page structure.
+**AeroTruck Solutions** — tai profesionali logistikos ir sunkvežimių flotilės valdymo įmonė, teikianti visapusiškas paslaugas JAV vežėjams ir savininkams-operatoriams.
 
-## Files (place in repository root)
-- index.html
-- about.html
-- services.html
-- fleet.html
-- careers.html
-- contact.html
-- style.css
-- script.js
-- images/
-  - logo1.png
-  - ChatGPT Image Oct 6, 2025, 10_38_53 PM.png
+Mūsų tikslas — padėti transporto kompanijoms veikti efektyviau, saugiau ir pelningiau.
 
-## Quick deploy (GitHub Pages)
-1. Ensure all `.html`, `style.css`, and `script.js` are in repo root.
-2. Create `images/` folder and add image files (transparent PNGs).
-3. Commit & push to `main`.
-4. Settings → Pages → Source: `main` branch, Folder: `/ (root)`.
-5. Wait ~1–2 minutes and open:
-   `https://<username>.github.io/<repo>/`
+---
 
-## Notes
-- All pages use the same header & footer for consistent branding.
-- Truck hero animation (and headlights) run on the home page only.
-- Contact and Careers pages include forms (front-end validation + mailto fallback).
-- If images appear with white background, regenerate PNGs with transparency (e.g., remove.bg) before uploading.
+## 🌐 Gyva svetainė
 
-## Contact
-- Email: info@aerotrucksolutions.com  
-- Phone: +1 (708) 741-8002
+🔗 [https://aerotrucksolutions.github.io/aerotruck-website/](https://aerotrucksolutions.github.io/aerotruck-website/)
 
-© 2025 Aerotruck Solutions Inc.
+---
+
+## 📦 Projekto struktūra
+
+aerotruck-website/
+│
+├── images/ # Logotipas ir sunkvežimio nuotrauka
+│ ├── logo.png
+│ └── logo1.png
+│
+├── index.html # Pagrindinis puslapis
+├── about.html # Apie mus
+├── services.html # Paslaugos
+├── fleet.html # Fleet Portal
+├── careers.html # Karjeros galimybės
+├── contact.html # Kontaktų forma
+│
+├── style.css # Stilius ir dizainas
+└── script.js # JavaScript funkcijos (jei reikės)
+
+yaml
+Copy code
+
+---
+
+## 💼 Teikiamos paslaugos
+
+- **Accounting** — apskaita, IFTA ir mokesčių valdymas  
+- **Fleet Management** — telematika, priežiūra, maršrutai  
+- **Recruiting** — vairuotojų atranka ir įdarbinimas  
+- **24/7 Assistance** — visą parą veikiantis dispečerių palaikymas  
+
+---
+
+## 👨‍💻 Sukūrė
+
+**AeroTruck Solutions**  
+Premium fleet management & logistics company.  
+📧 support@aerotrucksolutions.com  
+📍 United States
+
+---
+
+## ⚙️ Techninė informacija
+
+Projektas kuriamas naudojant:
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **GitHub Pages** (hostingas)
+
+---
+
+© 2025 AeroTruck Solutions — All Rights Reserved.
