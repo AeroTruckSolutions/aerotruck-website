@@ -11,7 +11,7 @@ Premium marketing website for **Aerotruck Solutions Inc.** — dark theme, respo
 - contact.html
 - style.css
 - script.js
-- images/truck.png      (logo — white letters on red round mark)
+- images/logo.png      (logo — white letters on red round mark)
 - images/truck1.png     (truck image with transparent background)
 
 ## How to deploy
