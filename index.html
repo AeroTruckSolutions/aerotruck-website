@@ -1,54 +1,48 @@
-<!doctype html>
-<html lang="lt">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aerotruck Solutions — Premium Fleet Services</title>
-  <meta name="description" content="Aerotruck Solutions — premium fleet management, accounting & payroll, driver recruiting and 24/7 operational support for smart carriers.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aerotruck Solutions — Driven by Precision, Powered by Trust</title>
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Aerotruck Solutions home">
-        <img src="images/logo1.png" alt="Aerotruck Solutions logo" class="brand-logo">
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="logo1.png" alt="Aerotruck Solutions Logo">
       </a>
-
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="fleet.html">Fleet Portal</a></li>
+          <li><a href="fleet.html">Fleet</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html" class="btn contact-btn">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Moving Logistics Forward</h1>
-      <p>Premium fleet management and driver services built for performance, reliability, and innovation.</p>
-      <a href="services.html" class="btn hero-btn">Explore Services</a>
+    <div class="hero-text">
+      <h1>Driven by Precision. Powered by Trust.</h1>
+      <p>Your logistics and fleet management partner that delivers excellence — every mile, every time.</p>
+      <a href="services.html" class="btn">Explore Our Services</a>
     </div>
-
-    <!-- TRUCK ANIMATION -->
     <div class="truck-container">
-      <img src="images/ChatGPT Image Oct 6, 2025, 10_38_53 PM.png" alt="Aerotruck truck" class="truck">
-      <div class="headlights"></div>
+      <img id="truck" src="ChatGPT Image Oct 6, 2025, 10_38_53 PM.png" alt="Truck" />
+      <div id="headlights"></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Aerotruck Solutions Inc. All rights reserved.</p>
-      <p>📧 info@aerotrucksolutions.com | 📞 +1 708 741-8002</p>
+  <footer>
+    <div class="footer-container">
+      <img src="logo1.png" class="footer-logo" alt="Aerotruck Logo">
+      <p>info@aerotrucksolutions.com | +1 (708) 741-8002</p>
+      <p>&copy; <span id="year"></span> Aerotruck Solutions Inc. All rights reserved.</p>
     </div>
   </footer>
 </body>
