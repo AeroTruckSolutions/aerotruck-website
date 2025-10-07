@@ -1,53 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aerotruck Solutions — Drive Beyond Limits</title>
-  <meta name="description" content="Aerotruck Solutions provides professional logistics, fleet management, dispatch, and accounting services for carriers across the U.S.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aerotruck Solutions — Driven by Precision. Powered by Trust.</title>
+  <meta name="description" content="Aerotruck Solutions provides premium fleet management, dispatch, accounting and driver recruiting services across the US.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo1.png" alt="Aerotruck Logo" class="logo">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" aria-label="Aerotruck home">
+        <img src="images/logo1.png" alt="Aerotruck logo" class="brand-logo">
       </a>
-      <nav class="nav">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="fleet.html">Fleet Portal</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html" class="btn">Contact</a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="fleet.html">Fleet</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html" class="btn">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Drive Beyond Limits</h1>
-      <p>We redefine fleet management, logistics, and driver support through technology, precision, and trust.</p>
-      <a href="services.html" class="btn hero-btn">Discover Our Services</a>
-    </div>
+  <!-- Starry sky background -->
+  <div class="night-sky" aria-hidden="true"></div>
 
-    <div class="truck-scene">
-      <img src="images/truck.png" alt="Truck" id="truckImg" class="truck">
-      <div id="headlights" class="headlights"></div>
-    </div>
-  </section>
+  <main>
+    <section class="hero container" role="region" aria-label="Hero">
+      <div class="hero-left hero-left reveal-up">
+        <h1>Driven by precision.<br>Powered by trust.</h1>
+        <p>We combine advanced telematics, attentive dispatching, and meticulous back-office support so carriers can focus on the road. Premium fleet management tailored for safety, compliance and profit.</p>
+        <div class="hero-ctas">
+          <a href="services.html" class="btn">Explore Services</a>
+          <a href="contact.html" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);">Get a Quote</a>
+        </div>
+      </div>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="intro">
-    <div class="container">
-      <h2>We Move Your Business Forward</h2>
-      <p>Aerotruck Solutions is built by logistics professionals who understand the road — and the data behind it. From dispatch and compliance to accounting, we handle the backend so you can stay focused on the front line.</p>
-    </div>
-  </section>
+      <div class="road-scene" aria-hidden="true">
+        <div class="horizon-glow"></div>
+        <div class="road"></div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+        <div class="truck-wrap">
+          <img src="images/ChatGPT Image Oct 6, 2025, 10_38_53 PM.png" alt="Freight truck" class="truck" />
+          <div class="truck-reflection" aria-hidden="true"></div>
+        </div>
+
+        <div class="headlights" id="headlights" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="page-section h-section reveal-up" id="services-overview">
+      <div class="container">
+        <h2>Comprehensive Fleet Services</h2>
+        <p>From real-time dispatch and route optimization to accounting and compliance, our end-to-end services reduce downtime and improve bottom-line results for owner-operators and carriers alike.</p>
+
+        <div class="services-grid" style="margin-top:22px">
+          <div class="card reveal-up">
+            <h3>Fleet Management</h3>
+            <p>Telematics, maintenance scheduling, and preventive care to keep your vehicles road-ready and productive.</p>
+          </div>
+          <div class="card reveal-up">
+            <h3>Accounting & Payroll</h3>
+            <p>Transparent settlements, automated payroll, IFTA and tax support — simplified for operators.</p>
+          </div>
+          <div class="card reveal-up">
+            <h3>Driver Recruiting</h3>
+            <p>Recruiting, screening and onboarding of professional CDL drivers who meet high safety standards.</p>
+          </div>
+          <div class="card reveal-up">
+            <h3>24/7 Support</h3>
+            <p>Live operations team to minimize disruption and respond to urgent needs around the clock.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section reveal-up">
+      <div class="container h-section">
+        <h2>Why Aerotruck</h2>
+        <p>We pair experienced professionals with modern tooling — fleet analytics, route optimization, and clear financial reporting — so carriers can scale while protecting margins and safety records.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Aerotruck Solutions. All rights reserved.</p>
       <p><a href="mailto:info@aerotrucksolutions.com">info@aerotrucksolutions.com</a> | +1 (708) 741-8002</p>
