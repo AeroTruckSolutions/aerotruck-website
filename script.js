@@ -1,79 +1,73 @@
-// script.js: nav toggle, reveal animations, truck slide-in + headlights blink, small parallax
-document.addEventListener('DOMContentLoaded', function() {
-  // NAV TOGGLE (mobile)
-  const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
-  if (navToggle && mainNav) {
-    navToggle.addEventListener('click', function() {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      if (mainNav.style.display === 'block') mainNav.style.display = '';
-      else mainNav.style.display = 'block';
-    });
-  }
+// script.js – Professional night version (truck animation, smooth scroll, reveal)
+document.addEventListener("DOMContentLoaded", () => {
 
-  // Footer year
-  const yearEl = document.getElementById('year');
+  // ===== Update Footer Year =====
+  const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // IntersectionObserver for reveal animations
-  const revealEls = document.querySelectorAll('.reveal-up');
-  const io = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
+  // ===== Smooth Scrolling for internal links =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
-  }, { threshold: 0.12 });
+  });
 
-  revealEls.forEach(el => io.observe(el));
+  // ===== Reveal Animation on Scroll =====
+  const revealEls = document.querySelectorAll(".reveal-up");
+  const revealObs = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  revealEls.forEach(el => revealObs.observe(el));
 
-  // === Truck slide-in + headlights blink ===
-  const truck = document.querySelector('.truck');
-  const headlights = document.querySelector('.headlights');
+  // ===== Truck Animation (only on index.html) =====
+  const truck = document.querySelector(".truck-container img");
+  const headlights = document.getElementById("headlights");
 
   if (truck) {
-    const truckObserver = new IntersectionObserver((entries, obs) => {
+    // slide-in observer
+    const truckObs = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          truck.classList.add('in-view');
-          // Blink headlights after arrival
+          truck.classList.add("truck-in");
           setTimeout(() => {
+            // blink headlights 3 times
             if (headlights) {
-              headlights.classList.add('blink');
-              setTimeout(() => {
-                headlights.classList.remove('blink');
-                headlights.style.opacity = '0.15';
-              }, 1900);
+              headlights.style.opacity = "1";
+              let count = 0;
+              const blink = setInterval(() => {
+                headlights.style.opacity = headlights.style.opacity === "1" ? "0.1" : "1";
+                count++;
+                if (count >= 6) {
+                  clearInterval(blink);
+                  headlights.style.opacity = "0.25";
+                }
+              }, 250);
             }
-          }, 900);
+          }, 2200);
           obs.unobserve(truck);
         }
       });
     }, { threshold: 0.4 });
-
-    truckObserver.observe(truck);
-
-    // Small scroll parallax for truck
-    window.addEventListener('scroll', function() {
-      const rect = truck.getBoundingClientRect();
-      const offset = (window.innerHeight / 2 - rect.top) * 0.03;
-      truck.style.transform = `translateX(${Math.min(0, 40 - offset)}px) translateY(${offset * 0.1}px)`;
-    }, { passive: true });
+    truckObs.observe(truck);
   }
 
-  // Smooth internal anchor scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+  // ===== Optional: Parallax Truck Effect =====
+  window.addEventListener("scroll", () => {
+    const t = document.querySelector(".truck-container img");
+    if (t) {
+      const rect = t.getBoundingClientRect();
+      const offset = rect.top * 0.05;
+      t.style.transform = `translateX(0px) translateY(${offset}px)`;
+    }
   });
 
-  // Contact form validation (contact.html)
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      const name = form.quer
+});
